@@ -1,0 +1,21 @@
+{
+  "name": "arquitetura-cloud-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Azure Functions para o CRUD de salas do PJBL.",
+  "main": "src/{index.js,functions/*.js}",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "func start",
+    "test": "node --test tests/salas.test.js",
+    "test:api": "node scripts/smoke-test.js",
+    "test:frontend": "npm --prefix frontend run build",
+    "test:all": "npm test && npm run test:frontend"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "mongodb": "^7.6.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/assets/*",
+      "/*.js",
+      "/*.css",
+      "/*.ico",
+      "/*.png",
+      "/*.svg",
+      "/*.woff",
+      "/*.woff2"
+    ]
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' http://localhost:7071 https:; img-src 'self' data:"
+  }
+}
